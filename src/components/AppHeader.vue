@@ -2,19 +2,7 @@
 import { useAppStore } from '../stores/appStore.js'
 import NotificationCenter from './NotificationCenter.vue'
 
-const { state, roleLabel, logout, setPage, toggleDarkMode } = useAppStore()
-
-const navItems = [
-    { key: 'stat', label: 'Статистика', icon: 'pi-chart-bar' },
-    { key: 'calls', label: 'Звонки', icon: 'pi-phone' },
-    { key: 'reports', label: 'Отчёты', icon: 'pi-file-export' },
-    { key: 'scenarios', label: 'Сценарии', icon: 'pi-list-check' },
-    { key: 'group', label: 'Групп. проверки', icon: 'pi-users' },
-    { key: 'goals', label: 'Цели', icon: 'pi-flag' },
-    { key: 'coaching', label: 'Coaching', icon: 'pi-calendar' },
-    { key: 'achievements', label: 'Рейтинг', icon: 'pi-trophy' },
-    { key: 'chat', label: 'ИИ-ассистент', icon: 'pi-comments' }
-]
+const { state, roleLabel, logout, setPage, toggleDarkMode, navItems } = useAppStore()
 </script>
 
 <template>
@@ -52,7 +40,7 @@ const navItems = [
                     <i :class="['pi', state.darkMode ? 'pi-sun' : 'pi-moon']"></i>
                 </button>
 
-                <div class="user-chip">
+                <div class="user-chip" @click="setPage('profile')" :class="{ active: state.currentPage === 'profile' }" title="Личный кабинет">
                     <div class="user-avatar">{{ roleLabel[0] }}</div>
                     <div>
                         <div class="user-name">admin</div>
@@ -61,7 +49,7 @@ const navItems = [
                     <button
                         class="logout-btn"
                         title="Выйти"
-                        @click="logout"
+                        @click.stop="logout"
                     >
                         <i class="pi pi-sign-out"></i>
                     </button>
@@ -230,6 +218,12 @@ const navItems = [
     border: 1px solid var(--border);
     border-radius: 10px;
     padding: 4px 8px 4px 5px;
+    cursor: pointer;
+    transition: 0.15s;
+}
+.user-chip:hover, .user-chip.active {
+    border-color: var(--brand);
+    background: var(--brand-light);
 }
 
 .user-avatar {

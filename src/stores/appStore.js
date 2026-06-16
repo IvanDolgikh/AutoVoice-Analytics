@@ -13,18 +13,48 @@ const employeeScores = {
   'Григорьев А.В.': 8, 'Лебедев П.Р.': 7, 'Новиков О.А.': 10
 }
 
+// Per-criterion scores (max per criterion: [1,2,1,2,2,2,1,2] = 13)
+export const empCriteria = {
+  'Перминов А.А.':   [1, 2, 1, 2, 2, 1, 1, 1],
+  'Артемович Д.С.':  [1, 2, 1, 2, 2, 2, 1, 1],
+  'Суздальцев К.С.': [1, 2, 1, 1, 1, 0, 1, 2],
+  'Яхонтов Р.А.':    [1, 2, 1, 2, 1, 1, 1, 2],
+  'Абдуллин И.И.':   [1, 2, 1, 1, 2, 0, 1, 2],
+  'Белов Д.С.':      [1, 2, 1, 2, 2, 2, 1, 1],
+  'Морозов Р.А.':    [1, 1, 1, 2, 2, 1, 1, 2],
+  'Соколов К.С.':    [1, 2, 1, 1, 1, 1, 1, 2],
+  'Каримов И.И.':    [1, 2, 0, 1, 1, 1, 1, 2],
+  'Григорьев А.В.':  [1, 2, 0, 1, 1, 0, 1, 2],
+  'Лебедев П.Р.':    [1, 1, 0, 1, 1, 0, 1, 2],
+  'Новиков О.А.':    [1, 2, 1, 1, 2, 0, 1, 2]
+}
+
+const criteriaMax = [1, 2, 1, 2, 2, 2, 1, 2]
+
 export const criteria = [
-  'Потребность — Определённая',
-  'Приветствие — Представился',
-  'Имя клиента — Узнал / обращался по имени',
-  'Срок покупки — Уточнил срок',
-  'Тест-драйв — Предложил',
-  'Создание срочности',
+  'Потребность',
+  'Приветствие',
+  'Имя клиента',
+  'Срок покупки',
+  'Тест-драйв',
+  'Срочность',
   'Взял контакт',
-  'Следующий контакт — Договорился'
+  'След. контакт'
 ]
 
 export const criteriaPct = [78.9, 91.4, 67.1, 30.9, 40.1, 23.0, 56.6, 68.4]
+
+// Employee assigned to each role
+export const roleEmployee = {
+  employee: 'Новиков О.А.',
+  manager:  'Руководитель отдела' // manager is not in the list of employees
+}
+
+// Manager's team (subordinates)
+export const managerTeam = [
+  'Суздальцев К.С.', 'Соколов К.С.', 'Каримов И.И.',
+  'Григорьев А.В.', 'Лебедев П.Р.', 'Новиков О.А.'
+]
 
 const salons = ['Автосалон Окружная', 'Автосалон Федюнинского', 'Автосалон Пермякова']
 
@@ -32,7 +62,7 @@ const seed = [0.72, 0.45, 0.81, 0.33, 0.67, 0.55, 0.78, 0.42, 0.61, 0.38, 0.59, 
 const salonSeed = [0, 1, 2, 0, 1, 2, 0, 1, 0, 2, 1, 0]
 const dateSeed = [1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4]
 
-const calls = employees.map((emp, idx) => ({
+const allCalls = employees.map((emp, idx) => ({
   id: idx + 1,
   date: `2025-02-0${dateSeed[idx]}`,
   employee: emp,
@@ -41,6 +71,52 @@ const calls = employees.map((emp, idx) => ({
   score: employeeScores[emp],
   dialog: `Диалог с ${emp}: обсуждение условий покупки, тест-драйв, акции.`
 }))
+
+// Nav items per role
+const navByRole = {
+  director: [
+    { key: 'stat',      label: 'Статистика',      icon: 'pi-chart-bar' },
+    { key: 'calls',     label: 'Звонки',           icon: 'pi-phone' },
+    { key: 'reports',   label: 'Отчёты',           icon: 'pi-file-export' },
+    { key: 'scenarios', label: 'Сценарии',         icon: 'pi-list-check' },
+    { key: 'group',     label: 'Групп. проверки',  icon: 'pi-users' },
+    { key: 'goals',     label: 'Цели',             icon: 'pi-flag' },
+    { key: 'coaching',  label: 'Coaching',         icon: 'pi-calendar' },
+    { key: 'chat',      label: 'ИИ-ассистент',     icon: 'pi-comments' },
+  ],
+  manager: [
+    { key: 'stat',      label: 'Статистика',      icon: 'pi-chart-bar' },
+    { key: 'calls',     label: 'Звонки',           icon: 'pi-phone' },
+    { key: 'reports',   label: 'Отчёты',           icon: 'pi-file-export' },
+    { key: 'group',     label: 'Групп. проверки',  icon: 'pi-users' },
+    { key: 'goals',     label: 'Цели',             icon: 'pi-flag' },
+    { key: 'coaching',  label: 'Coaching',         icon: 'pi-calendar' },
+    { key: 'chat',      label: 'ИИ-ассистент',     icon: 'pi-comments' },
+  ],
+  employee: [
+    { key: 'stat',          label: 'Мой дашборд',   icon: 'pi-chart-bar' },
+    { key: 'calls',         label: 'Мои звонки',    icon: 'pi-phone' },
+    { key: 'achievements',  label: 'Рейтинг',       icon: 'pi-trophy' },
+    { key: 'coaching',      label: 'Coaching',      icon: 'pi-calendar' },
+    { key: 'chat',          label: 'ИИ-ассистент',  icon: 'pi-comments' },
+  ],
+}
+
+export function getCriteriaPct(empName) {
+  const scores = empCriteria[empName]
+  if (!scores) return criteriaMax.map(() => 0)
+  return scores.map((s, i) => Math.round((s / criteriaMax[i]) * 100))
+}
+
+export function getTeamAvgCriteriaPct(teamNames) {
+  const list = teamNames || employees
+  const sums = criteriaMax.map(() => 0)
+  list.forEach(name => {
+    const sc = empCriteria[name]
+    if (sc) sc.forEach((v, i) => { sums[i] += (v / criteriaMax[i]) * 100 })
+  })
+  return sums.map(s => Math.round(s / list.length))
+}
 
 const state = reactive({
   isLoggedIn: false,
@@ -51,8 +127,29 @@ const state = reactive({
 })
 
 export function useAppStore() {
-  const topEmployees = computed(() =>
-    [...employees]
+
+  const myEmployeeName = computed(() =>
+    state.currentRole === 'employee' ? roleEmployee.employee : null
+  )
+
+  const visibleEmployees = computed(() => {
+    if (state.currentRole === 'director') return employees
+    if (state.currentRole === 'manager')  return managerTeam
+    if (state.currentRole === 'employee') return [roleEmployee.employee]
+    return employees
+  })
+
+  const calls = computed(() => {
+    if (state.currentRole === 'employee') return allCalls.filter(c => c.employee === roleEmployee.employee)
+    if (state.currentRole === 'manager')  return allCalls.filter(c => managerTeam.includes(c.employee))
+    return allCalls
+  })
+
+  const navItems = computed(() => navByRole[state.currentRole] || navByRole.director)
+
+  const topEmployees = computed(() => {
+    const list = visibleEmployees.value
+    return [...list]
       .sort((a, b) => employeeScores[b] - employeeScores[a])
       .slice(0, 5)
       .map(emp => ({
@@ -60,27 +157,23 @@ export function useAppStore() {
         score: employeeScores[emp],
         percent: +((employeeScores[emp] / 13) * 100).toFixed(1)
       }))
+  })
+
+  const allEmployeesRanked = computed(() =>
+    [...employees]
+      .sort((a, b) => employeeScores[b] - employeeScores[a])
+      .map((emp, i) => ({
+        rank: i + 1,
+        name: emp,
+        score: employeeScores[emp],
+        percent: +((employeeScores[emp] / 13) * 100).toFixed(1),
+        isMe: emp === myEmployeeName.value
+      }))
   )
 
   const criteriaData = computed(() =>
     criteria.map((name, i) => ({ name, pct: criteriaPct[i] }))
   )
-
-  // Per-criterion scores (max: [1,2,1,2,2,2,1,2] = 13)
-  const empCriteria = {
-    'Перминов А.А.':   [1, 2, 1, 2, 2, 1, 1, 1],
-    'Артемович Д.С.':  [1, 2, 1, 2, 2, 2, 1, 1],
-    'Суздальцев К.С.': [1, 2, 1, 1, 1, 0, 1, 2],
-    'Яхонтов Р.А.':    [1, 2, 1, 2, 1, 1, 1, 2],
-    'Абдуллин И.И.':   [1, 2, 1, 1, 2, 0, 1, 2],
-    'Белов Д.С.':      [1, 2, 1, 2, 2, 2, 1, 1],
-    'Морозов Р.А.':    [1, 1, 1, 2, 2, 1, 1, 2],
-    'Соколов К.С.':    [1, 2, 1, 1, 1, 1, 1, 2],
-    'Каримов И.И.':    [1, 2, 0, 1, 1, 1, 1, 2],
-    'Григорьев А.В.':  [1, 2, 0, 1, 1, 0, 1, 2],
-    'Лебедев П.Р.':    [1, 1, 0, 1, 1, 0, 1, 2],
-    'Новиков О.А.':    [1, 2, 1, 1, 2, 0, 1, 2]
-  }
 
   const scoreReport = computed(() =>
     employees.map(emp => {
@@ -97,6 +190,8 @@ export function useAppStore() {
   function login(role) {
     state.isLoggedIn = true
     state.currentRole = role
+    // reset to default page for role
+    state.currentPage = 'stat'
   }
 
   function logout() {
@@ -124,7 +219,9 @@ export function useAppStore() {
   }
 
   return {
-    state, calls, topEmployees, criteriaData, scoreReport, roleLabel,
+    state, calls, navItems, topEmployees, allEmployeesRanked,
+    myEmployeeName, visibleEmployees,
+    criteriaData, scoreReport, roleLabel,
     login, logout, setPage, addTag, removeTag, toggleDarkMode
   }
 }

@@ -107,7 +107,7 @@ function callCriteria(call) {
 
 // ── Filtered calls ────────────────────────────────────────────────────────────
 const filteredCalls = computed(() => {
-  return calls.filter(c => {
+  return calls.value.filter(c => {
     if (salonFilter.value && c.salon !== salonFilter.value) return false
     if (typeFilter.value  && c.type  !== typeFilter.value)  return false
     if (activeFilters.value.size > 0) {

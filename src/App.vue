@@ -11,6 +11,7 @@ import ChatPage from './components/pages/ChatPage.vue'
 import GoalsPage from './components/pages/GoalsPage.vue'
 import CoachingPage from './components/pages/CoachingPage.vue'
 import AchievementsPage from './components/pages/AchievementsPage.vue'
+import ProfilePage from './components/pages/ProfilePage.vue'
 import SupportChat from './components/SupportChat.vue'
 
 const { state } = useAppStore()
@@ -32,6 +33,7 @@ const { state } = useAppStore()
         <CoachingPage     v-else-if="state.currentPage === 'coaching'"     key="coaching" />
         <AchievementsPage v-else-if="state.currentPage === 'achievements'" key="achievements" />
         <ChatPage         v-else-if="state.currentPage === 'chat'"         key="chat" />
+        <ProfilePage      v-else-if="state.currentPage === 'profile'"     key="profile" />
       </transition>
     </main>
     <SupportChat />
