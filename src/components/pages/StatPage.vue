@@ -282,7 +282,7 @@ function hmColor(v) {
       <div class="role-header">
         <div>
           <h2 class="role-title"><i class="pi pi-chart-bar"></i> Мой дашборд</h2>
-          <span class="role-sub">Февраль 2025 · Личная статистика</span>
+          <span class="role-sub">Июнь 2026 · Личная статистика</span>
         </div>
         <div class="role-badge emp">Сотрудник</div>
       </div>
@@ -372,7 +372,7 @@ function hmColor(v) {
       <div class="role-header">
         <div>
           <h2 class="role-title"><i class="pi pi-users"></i> Дашборд команды</h2>
-          <span class="role-sub">Февраль 2025 · {{ teamRanked.length }} сотрудников</span>
+          <span class="role-sub">Июнь 2026 · {{ teamRanked.length }} сотрудников</span>
         </div>
         <div class="role-badge mgr">Руководитель</div>
       </div>
@@ -517,7 +517,7 @@ function hmColor(v) {
     <template v-else>
 
       <div class="period-bar">
-        <span class="period-label"><i class="pi pi-calendar"></i> Февраль 2025</span>
+        <span class="period-label"><i class="pi pi-calendar"></i> Июнь 2026</span>
         <button class="compare-btn" :class="{ active: showComparison }" @click="showComparison = !showComparison">
           <i class="pi pi-sliders-h"></i>
           {{ showComparison ? 'Скрыть сравнение' : 'Сравнить с прошлым периодом' }}
@@ -555,7 +555,7 @@ function hmColor(v) {
       <transition name="slide-down">
         <div v-if="showComparison" class="kpi-row prev-row">
           <div v-for="(kpi, i) in prevKpis" :key="kpi.label" class="kpi-card av-card prev-card">
-            <div class="prev-badge">Январь 2025</div>
+            <div class="prev-badge">Май 2026</div>
             <div class="kpi-value" :style="{ color: kpi.color, fontSize:'1.5rem' }">{{ kpi.value }}</div>
             <div class="kpi-label">{{ kpi.label }}</div>
             <svg class="sparkline" viewBox="0 0 110 38" preserveAspectRatio="none">

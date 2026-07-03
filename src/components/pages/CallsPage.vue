@@ -8,8 +8,8 @@ import DatePicker from 'primevue/datepicker'
 const { calls } = useAppStore()
 
 // ── Filters ───────────────────────────────────────────────────────────────────
-const dateFrom    = ref(new Date('2025-02-01'))
-const dateTo      = ref(new Date('2025-02-04'))
+const dateFrom    = ref(new Date('2026-06-01'))
+const dateTo      = ref(new Date('2026-06-30'))
 const salonFilter = ref(null)
 const typeFilter  = ref(null)
 const selectedCall = ref(null)

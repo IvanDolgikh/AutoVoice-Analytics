@@ -16,29 +16,29 @@ const scenarioList = [
     critLabels: ['Приветствие','Имя','Потребность','Срок','Тест-драйв','Срочность','Контакт','След. контакт'],
     employees: [
       { name:'Артемович Д.С.',  salon:'Окружная',     calls:3, score:92, prev:88, crit:[100,100,100, 67,100, 33,100,100],
-        callRows:[{id:'A-01',date:'04.02',score:97,failed:[]},{id:'A-02',date:'03.02',score:91,failed:['urgency']},{id:'A-03',date:'02.02',score:88,failed:['deadline','urgency']}] },
+        callRows:[{id:'A-01',date:'29.06',score:97,failed:[]},{id:'A-02',date:'28.06',score:91,failed:['urgency']},{id:'A-03',date:'27.06',score:88,failed:['deadline','urgency']}] },
       { name:'Белов Д.С.',      salon:'Федюнинского', calls:3, score:89, prev:91, crit:[100,100,100,100, 67, 33,100, 67],
-        callRows:[{id:'B-01',date:'04.02',score:93,failed:[]},{id:'B-02',date:'03.02',score:89,failed:['urgency']},{id:'B-03',date:'02.02',score:85,failed:['testdrive','urgency','nextcontact']}] },
+        callRows:[{id:'B-01',date:'29.06',score:93,failed:[]},{id:'B-02',date:'28.06',score:89,failed:['urgency']},{id:'B-03',date:'27.06',score:85,failed:['testdrive','urgency','nextcontact']}] },
       { name:'Яхонтов Р.А.',    salon:'Окружная',     calls:2, score:84, prev:79, crit:[100,100,100,100, 50, 50,100,  0],
-        callRows:[{id:'Y-01',date:'04.02',score:90,failed:['urgency']},{id:'Y-02',date:'03.02',score:78,failed:['testdrive','urgency','nextcontact']}] },
+        callRows:[{id:'Y-01',date:'29.06',score:90,failed:['urgency']},{id:'Y-02',date:'28.06',score:78,failed:['testdrive','urgency','nextcontact']}] },
       { name:'Перминов А.А.',   salon:'Пермякова',    calls:3, score:82, prev:85, crit:[100,100,100,  0, 67,  0,100,100],
-        callRows:[{id:'P-01',date:'04.02',score:89,failed:[]},{id:'P-02',date:'03.02',score:84,failed:['deadline','urgency']},{id:'P-03',date:'02.02',score:73,failed:['deadline','testdrive','urgency']}] },
+        callRows:[{id:'P-01',date:'29.06',score:89,failed:[]},{id:'P-02',date:'28.06',score:84,failed:['deadline','urgency']},{id:'P-03',date:'27.06',score:73,failed:['deadline','testdrive','urgency']}] },
       { name:'Морозов Р.А.',    salon:'Окружная',     calls:2, score:79, prev:76, crit:[100,100,100, 50, 50,  0,100,100],
-        callRows:[{id:'M-01',date:'04.02',score:85,failed:['urgency']},{id:'M-02',date:'03.02',score:73,failed:['deadline','testdrive','urgency']}] },
+        callRows:[{id:'M-01',date:'29.06',score:85,failed:['urgency']},{id:'M-02',date:'28.06',score:73,failed:['deadline','testdrive','urgency']}] },
       { name:'Соколов К.С.',    salon:'Федюнинского', calls:2, score:76, prev:78, crit:[100, 50,100, 50, 50,  0,100, 50],
-        callRows:[{id:'S-01',date:'04.02',score:81,failed:['urgency','name']},{id:'S-02',date:'03.02',score:71,failed:['deadline','testdrive','urgency','nextcontact']}] },
+        callRows:[{id:'S-01',date:'29.06',score:81,failed:['urgency','name']},{id:'S-02',date:'28.06',score:71,failed:['deadline','testdrive','urgency','nextcontact']}] },
       { name:'Абдуллин И.И.',   salon:'Пермякова',    calls:2, score:73, prev:68, crit:[100,100,100,  0,  0,  0,100, 50],
-        callRows:[{id:'Ab-01',date:'04.02',score:79,failed:['urgency']},{id:'Ab-02',date:'03.02',score:67,failed:['deadline','testdrive','urgency','nextcontact']}] },
+        callRows:[{id:'Ab-01',date:'29.06',score:79,failed:['urgency']},{id:'Ab-02',date:'28.06',score:67,failed:['deadline','testdrive','urgency','nextcontact']}] },
       { name:'Суздальцев К.С.', salon:'Пермякова',    calls:2, score:69, prev:72, crit:[100, 50,100,  0,  0,  0,100, 50],
-        callRows:[{id:'Su-01',date:'04.02',score:73,failed:['urgency','name']},{id:'Su-02',date:'03.02',score:65,failed:['deadline','testdrive','urgency','nextcontact']}] },
+        callRows:[{id:'Su-01',date:'29.06',score:73,failed:['urgency','name']},{id:'Su-02',date:'28.06',score:65,failed:['deadline','testdrive','urgency','nextcontact']}] },
       { name:'Новиков О.А.',    salon:'Федюнинского', calls:3, score:72, prev:69, crit:[100,100,100,  0, 50,  0,100, 50],
-        callRows:[{id:'N-01',date:'04.02',score:78,failed:['urgency']},{id:'N-02',date:'03.02',score:71,failed:['deadline','urgency']},{id:'N-03',date:'02.02',score:67,failed:['deadline','testdrive','urgency','nextcontact']}] },
+        callRows:[{id:'N-01',date:'29.06',score:78,failed:['urgency']},{id:'N-02',date:'28.06',score:71,failed:['deadline','urgency']},{id:'N-03',date:'27.06',score:67,failed:['deadline','testdrive','urgency','nextcontact']}] },
       { name:'Каримов И.И.',    salon:'Федюнинского', calls:2, score:64, prev:67, crit:[100, 50,  0,  0, 50,  0,100, 50],
-        callRows:[{id:'K-01',date:'04.02',score:70,failed:['needs','urgency','name']},{id:'K-02',date:'03.02',score:58,failed:['needs','deadline','testdrive','urgency','nextcontact']}] },
+        callRows:[{id:'K-01',date:'29.06',score:70,failed:['needs','urgency','name']},{id:'K-02',date:'28.06',score:58,failed:['needs','deadline','testdrive','urgency','nextcontact']}] },
       { name:'Григорьев А.В.',  salon:'Окружная',     calls:2, score:59, prev:62, crit:[100,100,  0,  0, 50,  0,100,  0],
-        callRows:[{id:'G-01',date:'04.02',score:64,failed:['needs','urgency']},{id:'G-02',date:'03.02',score:54,failed:['needs','deadline','testdrive','urgency','nextcontact']}] },
+        callRows:[{id:'G-01',date:'29.06',score:64,failed:['needs','urgency']},{id:'G-02',date:'28.06',score:54,failed:['needs','deadline','testdrive','urgency','nextcontact']}] },
       { name:'Лебедев П.Р.',    salon:'Пермякова',    calls:2, score:54, prev:57, crit:[100, 50,  0,  0, 50,  0,100,  0],
-        callRows:[{id:'L-01',date:'04.02',score:58,failed:['needs','urgency','name']},{id:'L-02',date:'03.02',score:50,failed:['needs','deadline','testdrive','urgency','nextcontact','name']}] }
+        callRows:[{id:'L-01',date:'29.06',score:58,failed:['needs','urgency','name']},{id:'L-02',date:'28.06',score:50,failed:['needs','deadline','testdrive','urgency','nextcontact','name']}] }
     ]
   },
   {
@@ -50,17 +50,17 @@ const scenarioList = [
     critLabels: ['Приветствие','Имя','Потребность','Запись'],
     employees: [
       { name:'Никитина С.В.', salon:'Окружная',     calls:5, score:88, prev:82, crit:[100,100,80,80],
-        callRows:[{id:'Ни-01',date:'04.02',score:95,failed:[]},{id:'Ни-02',date:'04.02',score:90,failed:[]},{id:'Ни-03',date:'03.02',score:88,failed:['booking']},{id:'Ни-04',date:'03.02',score:85,failed:['booking']},{id:'Ни-05',date:'02.02',score:82,failed:['needs','booking']}] },
+        callRows:[{id:'Ни-01',date:'29.06',score:95,failed:[]},{id:'Ни-02',date:'29.06',score:90,failed:[]},{id:'Ни-03',date:'28.06',score:88,failed:['booking']},{id:'Ни-04',date:'28.06',score:85,failed:['booking']},{id:'Ни-05',date:'27.06',score:82,failed:['needs','booking']}] },
       { name:'Попов А.К.',    salon:'Федюнинского', calls:4, score:79, prev:75, crit:[100, 75,75,50],
-        callRows:[{id:'По-01',date:'04.02',score:88,failed:[]},{id:'По-02',date:'03.02',score:80,failed:['name']},{id:'По-03',date:'03.02',score:76,failed:['booking']},{id:'По-04',date:'02.02',score:72,failed:['name','needs','booking']}] },
+        callRows:[{id:'По-01',date:'29.06',score:88,failed:[]},{id:'По-02',date:'28.06',score:80,failed:['name']},{id:'По-03',date:'28.06',score:76,failed:['booking']},{id:'По-04',date:'27.06',score:72,failed:['name','needs','booking']}] },
       { name:'Зайцев М.П.',   salon:'Окружная',     calls:4, score:74, prev:70, crit:[100, 75,50,50],
-        callRows:[{id:'За-01',date:'04.02',score:82,failed:[]},{id:'За-02',date:'03.02',score:75,failed:['needs']},{id:'За-03',date:'03.02',score:71,failed:['booking']},{id:'За-04',date:'02.02',score:68,failed:['needs','booking']}] },
+        callRows:[{id:'За-01',date:'29.06',score:82,failed:[]},{id:'За-02',date:'28.06',score:75,failed:['needs']},{id:'За-03',date:'28.06',score:71,failed:['booking']},{id:'За-04',date:'27.06',score:68,failed:['needs','booking']}] },
       { name:'Кузьмин Е.В.',  salon:'Пермякова',    calls:3, score:69, prev:73, crit:[100, 67,67, 0],
-        callRows:[{id:'Ку-01',date:'04.02',score:78,failed:['booking']},{id:'Ку-02',date:'03.02',score:67,failed:['name','booking']},{id:'Ку-03',date:'02.02',score:62,failed:['needs','booking']}] },
+        callRows:[{id:'Ку-01',date:'29.06',score:78,failed:['booking']},{id:'Ку-02',date:'28.06',score:67,failed:['name','booking']},{id:'Ку-03',date:'27.06',score:62,failed:['needs','booking']}] },
       { name:'Смирнов Д.Г.',  salon:'Пермякова',    calls:3, score:62, prev:58, crit:[100, 67,33, 0],
-        callRows:[{id:'Сми-01',date:'04.02',score:70,failed:['needs','booking']},{id:'Сми-02',date:'03.02',score:61,failed:['name','booking']},{id:'Сми-03',date:'02.02',score:55,failed:['needs','name','booking']}] },
+        callRows:[{id:'Сми-01',date:'29.06',score:70,failed:['needs','booking']},{id:'Сми-02',date:'28.06',score:61,failed:['name','booking']},{id:'Сми-03',date:'27.06',score:55,failed:['needs','name','booking']}] },
       { name:'Орлов В.А.',    salon:'Федюнинского', calls:3, score:57, prev:60, crit:[100, 33,33, 0],
-        callRows:[{id:'Ор-01',date:'04.02',score:65,failed:['name','needs']},{id:'Ор-02',date:'03.02',score:56,failed:['name','booking']},{id:'Ор-03',date:'02.02',score:50,failed:['name','needs','booking']}] }
+        callRows:[{id:'Ор-01',date:'29.06',score:65,failed:['name','needs']},{id:'Ор-02',date:'28.06',score:56,failed:['name','booking']},{id:'Ор-03',date:'27.06',score:50,failed:['name','needs','booking']}] }
     ]
   },
   {
@@ -72,25 +72,25 @@ const scenarioList = [
     critLabels: ['Приветствие','Имя','Переключение'],
     employees: [
       { name:'Волкова Н.И.',   salon:'Окружная',     calls:8, score:91, prev:87, crit:[100,88,88],
-        callRows:[{id:'В-01',date:'04.02',score:96,failed:[]},{id:'В-02',date:'04.02',score:93,failed:[]},{id:'В-03',date:'03.02',score:91,failed:['name']},{id:'В-04',date:'03.02',score:89,failed:['transfer']},{id:'В-05',date:'02.02',score:88,failed:['name']},{id:'В-06',date:'02.02',score:90,failed:[]},{id:'В-07',date:'01.02',score:91,failed:[]},{id:'В-08',date:'01.02',score:90,failed:[]}] },
+        callRows:[{id:'В-01',date:'29.06',score:96,failed:[]},{id:'В-02',date:'29.06',score:93,failed:[]},{id:'В-03',date:'28.06',score:91,failed:['name']},{id:'В-04',date:'28.06',score:89,failed:['transfer']},{id:'В-05',date:'27.06',score:88,failed:['name']},{id:'В-06',date:'27.06',score:90,failed:[]},{id:'В-07',date:'26.06',score:91,failed:[]},{id:'В-08',date:'26.06',score:90,failed:[]}] },
       { name:'Петрова Е.А.',   salon:'Федюнинского', calls:7, score:86, prev:83, crit:[100,86,71],
-        callRows:[{id:'Пе-01',date:'04.02',score:92,failed:[]},{id:'Пе-02',date:'04.02',score:88,failed:['transfer']},{id:'Пе-03',date:'03.02',score:86,failed:['name']},{id:'Пе-04',date:'03.02',score:84,failed:['transfer']},{id:'Пе-05',date:'02.02',score:83,failed:['name','transfer']},{id:'Пе-06',date:'02.02',score:85,failed:[]},{id:'Пе-07',date:'01.02',score:84,failed:[]}] },
+        callRows:[{id:'Пе-01',date:'29.06',score:92,failed:[]},{id:'Пе-02',date:'29.06',score:88,failed:['transfer']},{id:'Пе-03',date:'28.06',score:86,failed:['name']},{id:'Пе-04',date:'28.06',score:84,failed:['transfer']},{id:'Пе-05',date:'27.06',score:83,failed:['name','transfer']},{id:'Пе-06',date:'27.06',score:85,failed:[]},{id:'Пе-07',date:'26.06',score:84,failed:[]}] },
       { name:'Козлова М.В.',   salon:'Окружная',     calls:8, score:79, prev:81, crit:[100,75,63],
-        callRows:[{id:'Ко-01',date:'04.02',score:85,failed:['transfer']},{id:'Ко-02',date:'04.02',score:82,failed:['name']},{id:'Ко-03',date:'03.02',score:80,failed:['transfer']},{id:'Ко-04',date:'03.02',score:78,failed:['name','transfer']},{id:'Ко-05',date:'02.02',score:77,failed:['transfer']},{id:'Ко-06',date:'02.02',score:76,failed:['name']},{id:'Ко-07',date:'01.02',score:78,failed:[]},{id:'Ко-08',date:'01.02',score:75,failed:['name','transfer']}] },
+        callRows:[{id:'Ко-01',date:'29.06',score:85,failed:['transfer']},{id:'Ко-02',date:'29.06',score:82,failed:['name']},{id:'Ко-03',date:'28.06',score:80,failed:['transfer']},{id:'Ко-04',date:'28.06',score:78,failed:['name','transfer']},{id:'Ко-05',date:'27.06',score:77,failed:['transfer']},{id:'Ко-06',date:'27.06',score:76,failed:['name']},{id:'Ко-07',date:'26.06',score:78,failed:[]},{id:'Ко-08',date:'26.06',score:75,failed:['name','transfer']}] },
       { name:'Сидорова Т.П.',  salon:'Пермякова',    calls:7, score:73, prev:68, crit:[100,71,43],
-        callRows:[{id:'Си-01',date:'04.02',score:80,failed:['transfer']},{id:'Си-02',date:'04.02',score:76,failed:['name']},{id:'Си-03',date:'03.02',score:74,failed:['transfer']},{id:'Си-04',date:'03.02',score:71,failed:['name','transfer']},{id:'Си-05',date:'02.02',score:70,failed:['transfer']},{id:'Си-06',date:'02.02',score:68,failed:['name','transfer']},{id:'Си-07',date:'01.02',score:72,failed:['transfer']}] },
+        callRows:[{id:'Си-01',date:'29.06',score:80,failed:['transfer']},{id:'Си-02',date:'29.06',score:76,failed:['name']},{id:'Си-03',date:'28.06',score:74,failed:['transfer']},{id:'Си-04',date:'28.06',score:71,failed:['name','transfer']},{id:'Си-05',date:'27.06',score:70,failed:['transfer']},{id:'Си-06',date:'27.06',score:68,failed:['name','transfer']},{id:'Си-07',date:'26.06',score:72,failed:['transfer']}] },
       { name:'Михайлова О.С.', salon:'Пермякова',    calls:6, score:68, prev:71, crit:[100,50,50],
-        callRows:[{id:'Ми-01',date:'04.02',score:75,failed:['name','transfer']},{id:'Ми-02',date:'03.02',score:70,failed:['transfer']},{id:'Ми-03',date:'03.02',score:67,failed:['name','transfer']},{id:'Ми-04',date:'02.02',score:65,failed:['name','transfer']},{id:'Ми-05',date:'02.02',score:64,failed:['name']},{id:'Ми-06',date:'01.02',score:67,failed:['transfer']}] },
+        callRows:[{id:'Ми-01',date:'29.06',score:75,failed:['name','transfer']},{id:'Ми-02',date:'28.06',score:70,failed:['transfer']},{id:'Ми-03',date:'28.06',score:67,failed:['name','transfer']},{id:'Ми-04',date:'27.06',score:65,failed:['name','transfer']},{id:'Ми-05',date:'27.06',score:64,failed:['name']},{id:'Ми-06',date:'26.06',score:67,failed:['transfer']}] },
       { name:'Федотова А.В.',  salon:'Федюнинского', calls:5, score:61, prev:64, crit:[100,60,20],
-        callRows:[{id:'Фе-01',date:'04.02',score:68,failed:['transfer']},{id:'Фе-02',date:'03.02',score:63,failed:['name','transfer']},{id:'Фе-03',date:'03.02',score:59,failed:['transfer']},{id:'Фе-04',date:'02.02',score:57,failed:['name','transfer']},{id:'Фе-05',date:'01.02',score:58,failed:['name','transfer']}] }
+        callRows:[{id:'Фе-01',date:'29.06',score:68,failed:['transfer']},{id:'Фе-02',date:'28.06',score:63,failed:['name','transfer']},{id:'Фе-03',date:'28.06',score:59,failed:['transfer']},{id:'Фе-04',date:'27.06',score:57,failed:['name','transfer']},{id:'Фе-05',date:'26.06',score:58,failed:['name','transfer']}] }
     ]
   }
 ]
 
 // ── Config state ──────────────────────────────────────────────────────────────
 const selectedKey = ref('sales')
-const dateFrom    = ref(new Date('2025-02-01'))
-const dateTo      = ref(new Date('2025-02-04'))
+const dateFrom    = ref(new Date('2026-06-01'))
+const dateTo      = ref(new Date('2026-06-30'))
 const salonOpts   = [
   { label: 'Все салоны', value: null },
   { label: 'Автосалон Окружная', value: 'Окружная' },

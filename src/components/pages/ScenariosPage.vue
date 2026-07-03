@@ -36,15 +36,15 @@ const scenarios = reactive([
     desc: 'Конверсия: сколько получилось переключить, сколько нет. Оценивается вежливость, скорость ответа и успешность перевода на нужного специалиста.',
     active: true, schedule: 'daily',
     threshold: 70,
-    lastRun: '04.02.2025 08:01',
+    lastRun: '29.06.2026 08:01',
     callsChecked: 48, avgScore: 82, flagged: 6,
     spark: [78, 80, 75, 83, 85, 82, 82],
     history: [
-      { date: '04.02', calls: 48, avg: 82, flagged: 6 },
-      { date: '03.02', calls: 51, avg: 85, flagged: 4 },
-      { date: '02.02', calls: 44, avg: 80, flagged: 7 },
-      { date: '01.02', calls: 46, avg: 75, flagged: 9 },
-      { date: '31.01', calls: 50, avg: 83, flagged: 5 }
+      { date: '29.06', calls: 48, avg: 82, flagged: 6 },
+      { date: '28.06', calls: 51, avg: 85, flagged: 4 },
+      { date: '27.06', calls: 44, avg: 80, flagged: 7 },
+      { date: '26.06', calls: 46, avg: 75, flagged: 9 },
+      { date: '25.06', calls: 50, avg: 83, flagged: 5 }
     ],
     criteria: ['greeting', 'name', 'transfer'],
     expanded: false
@@ -56,15 +56,15 @@ const scenarios = reactive([
     desc: 'Оценка качества обработки входящих звонков: приветствие по скрипту, обращение по имени, вежливость завершения разговора.',
     active: true, schedule: 'daily',
     threshold: 65,
-    lastRun: '04.02.2025 08:03',
+    lastRun: '29.06.2026 08:03',
     callsChecked: 61, avgScore: 76, flagged: 11,
     spark: [72, 74, 71, 78, 77, 76, 76],
     history: [
-      { date: '04.02', calls: 61, avg: 76, flagged: 11 },
-      { date: '03.02', calls: 58, avg: 78, flagged: 9  },
-      { date: '02.02', calls: 63, avg: 71, flagged: 14 },
-      { date: '01.02', calls: 60, avg: 74, flagged: 12 },
-      { date: '31.01', calls: 55, avg: 72, flagged: 13 }
+      { date: '29.06', calls: 61, avg: 76, flagged: 11 },
+      { date: '28.06', calls: 58, avg: 78, flagged: 9  },
+      { date: '27.06', calls: 63, avg: 71, flagged: 14 },
+      { date: '26.06', calls: 60, avg: 74, flagged: 12 },
+      { date: '25.06', calls: 55, avg: 72, flagged: 13 }
     ],
     criteria: ['greeting', 'name'],
     expanded: false
@@ -76,15 +76,15 @@ const scenarios = reactive([
     desc: 'Полная оценка работы менеджеров по скрипту Changan: приветствие, выявление потребности, тест-драйв, создание срочности, контакт и планирование следующего шага.',
     active: true, schedule: 'daily',
     threshold: 75,
-    lastRun: '04.02.2025 09:01',
+    lastRun: '29.06.2026 09:01',
     callsChecked: 34, avgScore: 79, flagged: 5,
     spark: [74, 77, 80, 78, 81, 79, 79],
     history: [
-      { date: '04.02', calls: 34, avg: 79, flagged: 5 },
-      { date: '03.02', calls: 37, avg: 81, flagged: 4 },
-      { date: '02.02', calls: 31, avg: 78, flagged: 6 },
-      { date: '01.02', calls: 33, avg: 77, flagged: 6 },
-      { date: '31.01', calls: 36, avg: 74, flagged: 7 }
+      { date: '29.06', calls: 34, avg: 79, flagged: 5 },
+      { date: '28.06', calls: 37, avg: 81, flagged: 4 },
+      { date: '27.06', calls: 31, avg: 78, flagged: 6 },
+      { date: '26.06', calls: 33, avg: 77, flagged: 6 },
+      { date: '25.06', calls: 36, avg: 74, flagged: 7 }
     ],
     criteria: ['greeting', 'name', 'needs', 'deadline', 'testdrive', 'urgency', 'contact', 'nextcontact'],
     expanded: false
@@ -96,15 +96,15 @@ const scenarios = reactive([
     desc: 'Оценка обработки первичных обращений: конверсия к записи, вежливость, уточнение потребности в виде и сроках обслуживания.',
     active: true, schedule: 'weekly',
     threshold: 60,
-    lastRun: '03.02.2025 09:02',
+    lastRun: '28.06.2026 09:02',
     callsChecked: 27, avgScore: 68, flagged: 8,
     spark: [65, 70, 63, 68, 71, 69, 68],
     history: [
-      { date: '03.02', calls: 27, avg: 68, flagged: 8 },
-      { date: '27.01', calls: 29, avg: 71, flagged: 6 },
-      { date: '20.01', calls: 25, avg: 63, flagged: 9 },
-      { date: '13.01', calls: 31, avg: 70, flagged: 7 },
-      { date: '06.01', calls: 28, avg: 65, flagged: 9 }
+      { date: '28.06', calls: 27, avg: 68, flagged: 8 },
+      { date: '21.06', calls: 29, avg: 71, flagged: 6 },
+      { date: '14.06', calls: 25, avg: 63, flagged: 9 },
+      { date: '07.06', calls: 31, avg: 70, flagged: 7 },
+      { date: '31.05', calls: 28, avg: 65, flagged: 9 }
     ],
     criteria: ['greeting', 'name', 'needs', 'booking'],
     expanded: false
@@ -116,12 +116,12 @@ const scenarios = reactive([
     desc: 'Оценка: насколько специалист напоминает клиенту о необходимых документах и озвучивает полный перечень предстоящих работ.',
     active: false, schedule: 'manual',
     threshold: 60,
-    lastRun: '20.01.2025 10:00',
+    lastRun: '14.06.2026 10:00',
     callsChecked: 0, avgScore: 0, flagged: 0,
     spark: [55, 58, 0, 0, 0, 0, 0],
     history: [
-      { date: '20.01', calls: 18, avg: 58, flagged: 7 },
-      { date: '13.01', calls: 21, avg: 55, flagged: 9 }
+      { date: '14.06', calls: 18, avg: 58, flagged: 7 },
+      { date: '07.06', calls: 21, avg: 55, flagged: 9 }
     ],
     criteria: ['docs', 'worklist'],
     expanded: false
@@ -133,15 +133,15 @@ const scenarios = reactive([
     desc: 'Классификация итогов звонков на сервис: успешная/неуспешная запись. Анализ причин отказов и разработка рекомендаций.',
     active: true, schedule: 'daily',
     threshold: 50,
-    lastRun: '04.02.2025 10:01',
+    lastRun: '29.06.2026 10:01',
     callsChecked: 19, avgScore: 71, flagged: 4,
     spark: [67, 70, 73, 71, 69, 72, 71],
     history: [
-      { date: '04.02', calls: 19, avg: 71, flagged: 4 },
-      { date: '03.02', calls: 22, avg: 73, flagged: 3 },
-      { date: '02.02', calls: 20, avg: 69, flagged: 5 },
-      { date: '01.02', calls: 18, avg: 70, flagged: 4 },
-      { date: '31.01', calls: 21, avg: 67, flagged: 6 }
+      { date: '29.06', calls: 19, avg: 71, flagged: 4 },
+      { date: '28.06', calls: 22, avg: 73, flagged: 3 },
+      { date: '27.06', calls: 20, avg: 69, flagged: 5 },
+      { date: '26.06', calls: 18, avg: 70, flagged: 4 },
+      { date: '25.06', calls: 21, avg: 67, flagged: 6 }
     ],
     criteria: ['booking', 'needs'],
     expanded: false
@@ -153,15 +153,15 @@ const scenarios = reactive([
     desc: 'Анализ эффективности инициативных звонков по записи на ТО и ремонт. Конверсия, причины отказов, сравнение по операторам.',
     active: true, schedule: 'weekly',
     threshold: 55,
-    lastRun: '29.01.2025 11:03',
+    lastRun: '23.06.2026 11:03',
     callsChecked: 23, avgScore: 63, flagged: 7,
     spark: [60, 63, 58, 65, 63, 61, 63],
     history: [
-      { date: '29.01', calls: 23, avg: 63, flagged: 7 },
-      { date: '22.01', calls: 26, avg: 61, flagged: 8 },
-      { date: '15.01', calls: 24, avg: 65, flagged: 6 },
-      { date: '08.01', calls: 28, avg: 58, flagged: 9 },
-      { date: '01.01', calls: 20, avg: 60, flagged: 8 }
+      { date: '23.06', calls: 23, avg: 63, flagged: 7 },
+      { date: '16.06', calls: 26, avg: 61, flagged: 8 },
+      { date: '09.06', calls: 24, avg: 65, flagged: 6 },
+      { date: '02.06', calls: 28, avg: 58, flagged: 9 },
+      { date: '26.05', calls: 20, avg: 60, flagged: 8 }
     ],
     criteria: ['booking', 'contact', 'nextcontact'],
     expanded: false

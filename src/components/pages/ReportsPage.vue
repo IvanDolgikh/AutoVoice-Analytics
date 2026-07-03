@@ -9,8 +9,8 @@ import DatePicker from 'primevue/datepicker'
 const { scoreReport } = useAppStore()
 
 // ── Shared filters ────────────────────────────────────────────────────────────
-const dateFrom   = ref(new Date('2025-02-01'))
-const dateTo     = ref(new Date('2025-02-28'))
+const dateFrom   = ref(new Date('2026-06-01'))
+const dateTo     = ref(new Date('2026-06-30'))
 const salonOpts  = [
   { label: 'Все салоны', value: null },
   { label: 'Автосалон Окружная', value: 'okr' },

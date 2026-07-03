@@ -23,7 +23,7 @@ const profile = reactive({
   dept:      'Отдел продаж',
   position:  'Директор по качеству',
   salon:     'Автосалон Окружная',
-  startDate: '2026-05-16',
+  startDate: '2026-06-08',
   avatar:    'A',
 })
 const profileSaved = ref(false)
@@ -45,7 +45,7 @@ const activityLog = [
   { date: '16.06.2026', action: 'Запущена групповая проверка «Отдел продаж»',       icon: 'pi-play',         color: '#0b5e7e' },
   { date: '15.06.2026', action: 'Создана coaching-сессия с Лебедевым П.Р.',         icon: 'pi-calendar-plus',color: '#16a34a' },
   { date: '14.06.2026', action: 'Добавлена цель «Тест-драйв — предложил ≥ 60%»',   icon: 'pi-flag',         color: '#d97706' },
-  { date: '13.06.2026', action: 'Сформирован балльный отчёт за май 2025',           icon: 'pi-file-export',  color: '#7c3aed' },
+  { date: '13.06.2026', action: 'Сформирован балльный отчёт за май 2026',           icon: 'pi-file-export',  color: '#7c3aed' },
   { date: '12.06.2026', action: 'Обновлён сценарий «Первичное обращение»',          icon: 'pi-list-check',   color: '#0891b2' },
   { date: '10.06.2026', action: 'Проведена coaching-сессия с Каримовым И.И.',       icon: 'pi-check-circle', color: '#16a34a' },
 ]

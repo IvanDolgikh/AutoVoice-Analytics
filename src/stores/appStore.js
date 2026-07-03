@@ -60,11 +60,12 @@ const salons = ['Автосалон Окружная', 'Автосалон Фе�
 
 const seed = [0.72, 0.45, 0.81, 0.33, 0.67, 0.55, 0.78, 0.42, 0.61, 0.38, 0.59, 0.70]
 const salonSeed = [0, 1, 2, 0, 1, 2, 0, 1, 0, 2, 1, 0]
-const dateSeed = [1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4]
+
+const callDaySeed = [8, 21, 3, 17, 26, 12, 6, 29, 15, 23, 9, 19]
 
 const allCalls = employees.map((emp, idx) => ({
   id: idx + 1,
-  date: `2025-02-0${dateSeed[idx]}`,
+  date: `2026-06-${String(callDaySeed[idx]).padStart(2, '0')}`,
   employee: emp,
   salon: salons[salonSeed[idx]],
   type: seed[idx] > 0.6 ? 'Исходящий' : 'Входящий',
